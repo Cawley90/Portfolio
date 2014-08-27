@@ -11,7 +11,7 @@ $(document).ready(function(){
 });
 
 	function playSong () {
-	$('#mksong')[0].volume = 0.5;
+	$('#mksong')[0].volume = 0.2;
 	$('#mksong')[0].play();
 
 }

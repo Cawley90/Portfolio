@@ -68,6 +68,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	
+	
 }
 
 #businesspg {
@@ -77,6 +78,7 @@ body {
 	display: inline-block;
 	margin-right: -2px;
 	background-image: url(img/bsns.jpg);
+	cursor: pointer;
 }
 
 #thelist {
@@ -86,6 +88,7 @@ body {
 	display: inline-block;
 	margin-right: -2px;
 	background-image: url(img/list.jpg);
+	cursor: pointer;
 }
 
 #quiz {
@@ -95,6 +98,7 @@ body {
 	display: inline-block;
 	margin-right: -2px;
 	background-image: url(img/qz.jpg);
+	cursor: pointer;
 }
 
 #sfighter {
@@ -104,6 +108,7 @@ body {
 	display: inline-block;
 	margin-right: -2px;
 	background-image: url(img/sf.jpg);
+	cursor: pointer;
 }
 
 #fetch {
@@ -114,6 +119,7 @@ body {
 	display: inline-block;
 	left: 18%;
 	background-image: url(img/fetch.jpg);
+	cursor: pointer;
 
 }
 
@@ -125,6 +131,7 @@ body {
 	display: inline-block;
 	left: 18%;
 	background-image: url(img/hc.jpg);
+	cursor: pointer;
 }
 
 #stackajax {
@@ -135,6 +142,7 @@ body {
 	display: inline-block;
 	left: 18%;
 	background-image: url(img/sa.jpg);
+	cursor: pointer;
 }
 
 #pdetails {
@@ -145,5 +153,6 @@ body {
 	display: none;
 	margin-left: 25%;
 	margin-top: 50px;
+
 }
 
