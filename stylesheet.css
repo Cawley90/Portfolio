@@ -3,7 +3,7 @@ body {
 }
 
 #sidebar {
-	position: fixed;
+	
 	background-color: #252525;
 	height: 50px;
 	width: 100%;
@@ -37,9 +37,9 @@ body {
 }
 
 #cselect {
-	position: absolute;
+	float: left;	
 	top: 50%;
-	height: 381px;
+	height: 350px;
 	width: 700px;
 	display: none;
 	margin-left: 25%;
@@ -137,10 +137,13 @@ body {
 	background-image: url(img/sa.jpg);
 }
 
-#cbar {
-	height: 25px;
-	width: 50%;
-	margin: auto;
-	background-color: black;
-
+#pdetails {
+	height: 350px;
+	width: 46%;
+	background-color: white;
+	float: left;
+	display: none;
+	margin-left: 25%;
+	margin-top: 50px;
 }
+
