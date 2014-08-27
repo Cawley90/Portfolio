@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#pdetails').delay(3500).slideDown("medium");
 
 
-	//playSong();
+	playSong();
 
 });
 
