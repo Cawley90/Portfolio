@@ -28,8 +28,11 @@ $(document).ready(function(){
 		this.l = l;		
 
 		p.click(function() {
+				if ($('#chelp').css("display") == "none") {
+					$("#chelp").fadeIn("fast");
+				}
 				//p.css("border", "3px solid red");
-				pic.empty();
+				//pic.empty();
 				pTitle.text(t);
 				pDetails.text(v);
 				pic.css("background-image", i);
@@ -43,7 +46,7 @@ $(document).ready(function(){
 
 				closepre.click(function(){
 					framehold.fadeOut(500);
-					doverlay.fadeOut("fast");
+					doverlay.css("display", "none");
 					closepre.fadeOut(500);
 
 				})
@@ -128,6 +131,7 @@ $(document).ready(function(){
 
 	$("#me").click(function(){
 		mkIn();
+		$("#chelp").fadeOut();
 		pic.css("background-image", "url(img/thisguy.jpg");
 		pTitle.text("About This Guy");
 		pDetails.text("My name is Chris, and I am the creator of this page and all pages enclosed.  I'm part dog trainer (suddenly all the Corgis are explained), part front end web developer - albeit an amateur.  I can't stress that last part enough.  This portfolio marks the end of a course I've taken in front end development, but there's many more steps for me to take.  Keep your eyes on the internet, the Corgis are coming.");
@@ -138,6 +142,11 @@ $(document).ready(function(){
 	$("#aboutbtn").click(function(){
 		mkOut();
 		$("#aboutpage").fadeIn("fast");
+	})
+
+	$("#credits").click(function(){
+		mkOut();
+		$("#thankspage").fadeIn("fast");
 	})
 
 
