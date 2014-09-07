@@ -4,17 +4,23 @@ body {
 
 #sidebar {
 	
-	background-color: #252525;
+	background-color: #6A89B2;
 	height: 50px;
 	width: 100%;
 }
 
 .sb-button {
-	background-color: #0E0E0E;
-	width: 99%;
+	display: inline-block;
+	width: 15%;
 	height: 50px;
-	border: 1px solid #252525;
 	margin-top: 5px;
+	font-family: Raleway;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	padding-top: 10px;
+	margin-right: 4%;
+	cursor: pointer;
 }
 
 .titlefont {
@@ -162,7 +168,6 @@ body {
 	position: absolute;
 	height: 40%;
 	width: 46%;
-	background-color: white;
 	display: none;
 	margin: auto;
 	top: 9%;
@@ -179,14 +184,20 @@ body {
 }
 
 #pabout {
+	
 	float: right;
 	height: 100%;
 	width: 50%;
-	background-color:red;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+
 }
 
 #projtitle {
-	font-size: 30px;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	color: white;
 
 }
 
@@ -199,4 +210,63 @@ body {
 	background-image: url(img/sound.png);
 	background-repeat: no-repeat;
 	cursor: pointer;
+}
+
+#framehold {
+	position: fixed;
+	height: 70%;
+	width: 70%;
+	border: 1px solid black;
+	display: none;
+	z-index: 2;
+	left: 15%;
+	top: 20%;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+}
+
+#dark {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	display: none;
+}
+
+#closebtn {
+	position: fixed;
+	height: 30px;
+	width: 100px;
+	padding-bottom: 0.5%;
+	padding-top: 0.4%;
+	z-index: 3;
+	background-color: #6A89B2;
+	display: none;
+	left: 8%;
+	top: 20%;
+	font-family: 'Raleway';
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#aboutpage {
+	display: none;
+	position: absolute;
+	height: 70%;
+	width: 60%;
+	border: 1px solid #696969;
+	background-color: #5f5e5e;
+	left: 19%;
+	top: 10%;
+	text-align: center;
+	color: white;
+	font-family: 'Raleway';
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
 }
