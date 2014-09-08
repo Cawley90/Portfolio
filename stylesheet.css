@@ -324,5 +324,26 @@ iframe {
 	width:70%;
 }
 
+#proclick {
+	font-family: 'Raleway';
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
 
+#fatscreen {
+	position: absolute;
+	height: 30%;
+	width: 40%;
+	display: none;
+	background-color: #5F5E5E;
+	top: 50%;
+	left: 30%;
+	z-index: 3;
+}
 
+#easteregg {
+	display: none;
+	height: 90%;
+	width: 100%;
+}

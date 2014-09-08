@@ -15,6 +15,7 @@ $(document).ready(function(){
 	var pTitle = $("#projtitle");
 	var closepre = $("#closebtn");
 	var mksong = $('#mksong')[0];
+	var fatality = $("fatality")[0];
 
 
 	playSong();
@@ -36,9 +37,9 @@ $(document).ready(function(){
 					$("#chelp").fadeIn("fast");
 				}
 
+				//$("#proclick").empty();
 
 				console.log(p.contents);
-
 				pTitle.text(t);
 				pDetails.text(v);
 				pic.css("background-image", i);
@@ -162,6 +163,46 @@ $(document).ready(function(){
 	$("#standard").click(function(){
 		pageClear($("#regview"));
 	})
+
+	$("#cpendant").click(function(){
+		mksong.pause();
+		$("#fatality")[0].volume = 0.3;
+		$("#fatscreen").fadeIn(500);
+		doverlay.fadeTo("slow", 0.5).css("background-color", "black");
+		setTimeout(function(){
+			$("#fatality")[0].play();
+		}, 600)
+	})
+
+	var kkeys = []; 
+	var mkfat = "38,40";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( mkfat) >= 0 ) {
+
+    $(document).unbind('keydown',arguments.callee);
+        
+    	$("#avast")[0].volume = 0.5;
+    	setTimeout(function(){
+    		$("#avast")[0].play();
+    	}, 500);
+
+    	doverlay.fadeOut("fast");
+    	$("#fatscreen").fadeOut("fast");
+    	$("#changcont > div").fadeOut("fast");
+    	$("#easteregg").fadeIn();
+    	setInterval(function(){
+    		$("#easteregg").append("<img src = 'img/twerk.gif'>");
+    	}, 1000)
+		
+  
+  }
+
+});
+
 
 });
 
