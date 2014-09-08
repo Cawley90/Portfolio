@@ -42,6 +42,7 @@ body {
 	display: none;
 }
 
+
 #cselect {
 	position: absolute;
 	top: 51%;
@@ -52,7 +53,7 @@ body {
 	background-color: #5F5E5E; 
 	padding-left: 4%;
 	padding-top: 40px;
-	border: 1px solid #696969;
+	border: 2px solid #696969;
 	border-radius: 5px;
 	left: 27%;
 }
@@ -68,7 +69,7 @@ body {
 
 #cpendant {
 	position: relative;
-	width: 17%;
+	width: 17.9%;
 	height: 43%;
 	display: inline-block;
 	background-image: url('img/pend.png');
@@ -78,6 +79,8 @@ body {
 
 	
 }
+
+
 
 #businesspg {
 	position: relative;
@@ -258,7 +261,7 @@ iframe {
 	display: none;
 	position: absolute;
 	width: 60%;
-	border: 1px solid #696969;
+	border: 2px solid #696969;
 	background-color: #5f5e5e;
 	left: 19%;
 	top: 10%;
@@ -288,7 +291,7 @@ iframe {
 	display: none;
 	position: absolute;
 	width: 60%;
-	border: 1px solid #696969;
+	border: 2px solid #696969;
 	background-color: #5f5e5e;
 	left: 19%;
 	top: 10%;
@@ -299,3 +302,27 @@ iframe {
 	padding-right: 10px;
 	border-radius: 5px;
 }
+
+#regview {
+	display: none;
+	position: absolute;
+	width: 60%;
+	border: 2px solid #696969;
+	background-color: #5f5e5e;
+	left: 19%;
+	top: 10%;
+	text-align: center;
+	color: white;
+	font-family: 'Raleway';
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+
+#eyes {
+	width:70%;
+}
+
+
+

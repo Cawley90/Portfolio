@@ -19,6 +19,8 @@ $(document).ready(function(){
 
 	playSong();
 
+
+
 	//p = project (what the user clicks on), t = title, v = details, i = image
 	function Project(p, t, v, i, l){
 		this.p = p;
@@ -27,12 +29,16 @@ $(document).ready(function(){
 		this.i = i;
 		this.l = l;		
 
+
+
 		p.click(function() {
 				if ($('#chelp').css("display") == "none") {
 					$("#chelp").fadeIn("fast");
 				}
-				//p.css("border", "3px solid red");
-				//pic.empty();
+
+
+				console.log(p.contents);
+
 				pTitle.text(t);
 				pDetails.text(v);
 				pic.css("background-image", i);
@@ -41,7 +47,9 @@ $(document).ready(function(){
 					closepre.fadeIn(500);
 					framehold.fadeIn(500);
 					doverlay.fadeTo("slow", 0.5).css("background-color", "black");
-					framehold.html("<iframe height = '500px' width = '500px' src = '"+l+"'>")
+					framehold.html("<iframe height = '500px' width = '500px' src = '"+l+"'>");
+
+
 				})
 
 				closepre.click(function(){
@@ -105,32 +113,34 @@ $(document).ready(function(){
 
 		if (mksong.paused == false) {
 			mksong.pause();
+			$('#pause').css("background-image", "url(img/mute.png)");
 		} else {
 			mksong.play();
 			mksong.volume = 0.2;
+			$('#pause').css("background-image", "url(img/sound.png)");
 		}
 	})
 
-	function mkIn() {
-		if ($("#cselect").css("display") == "none") {
+
+	function pageClear(currentpg) {
+		this.currentpg = currentpg;
+
+		if (currentpg.css("display") == "none") {
 			$("#changcont > div").fadeOut("fast");
-			$("#cselect").fadeIn("fast");
-			$("#pdetails").fadeIn("fast");
+			currentpg.fadeIn("fast");
+			
 		}
-
 	}
 
 
-	function mkOut() {
-		$("#pdetails").fadeOut("fast");
-		$("#cselect").fadeOut("fast");
-	}
 
-	$("#folio").click(mkIn);
+	$("#folio").click(function(){
+		pageClear($("#cselect, #pdetails"))
+	});
 
 
 	$("#me").click(function(){
-		mkIn();
+		pageClear($("#cselect, #pdetails"))
 		$("#chelp").fadeOut();
 		pic.css("background-image", "url(img/thisguy.jpg");
 		pTitle.text("About This Guy");
@@ -140,15 +150,18 @@ $(document).ready(function(){
 
 
 	$("#aboutbtn").click(function(){
-		mkOut();
-		$("#aboutpage").fadeIn("fast");
+		pageClear($("#aboutpage"));
+
 	})
 
 	$("#credits").click(function(){
-		mkOut();
-		$("#thankspage").fadeIn("fast");
+		pageClear($("#thankspage"));
+
 	})
 
+	$("#standard").click(function(){
+		pageClear($("#regview"));
+	})
 
 });
 
