@@ -174,34 +174,53 @@ $(document).ready(function(){
 		}, 600)
 	})
 
+
+	//starting the easter egg button combo functions
 	var kkeys = []; 
-	var mkfat = "38,40";
+	var mkfat = "40,39,65";
 
-$(document).keydown(function(e) {
+	//this is really only here as a function to display which buttons the user has pressed, only have it set up for the correct buttons.
+	$(document).keydown(function(e){
+    	if(e.which == 40) {
+    		$("#fatscreen").append("<img src = 'img/dwn.png'>");
+    	}
+    	
+    	else if (e.which == 39) {
+    		$("#fatscreen").append("<img src = 'img/fwd.png'>");
+    	}
 
-  kkeys.push( e.keyCode );
+    	else if (e.which == 65) {
+    		$("fatscreen").append("img src = 'img/a.png'>");
+    	}
+	})
 
-  if ( kkeys.toString().indexOf( mkfat) >= 0 ) {
 
-    $(document).unbind('keydown',arguments.callee);
+	//combination function
+	$(document).keydown(function(e) {
+
+  	kkeys.push( e.keyCode );
+
+  	if ( kkeys.toString().indexOf(mkfat) >= 0 ) {
+
+    	$(document).unbind('keydown',arguments.callee);
         
-    	$("#avast")[0].volume = 0.5;
-    	setTimeout(function(){
-    		$("#avast")[0].play();
-    	}, 500);
+    		$("#avast")[0].volume = 0.5;
+    		setTimeout(function(){
+    			$("#avast")[0].play();
+    		}, 500);
 
-    	doverlay.fadeOut("fast");
-    	$("#fatscreen").fadeOut("fast");
-    	$("#changcont > div").fadeOut("fast");
-    	$("#easteregg").fadeIn();
-    	setInterval(function(){
-    		$("#easteregg").append("<img src = 'img/twerk.gif'>");
-    	}, 1000)
+    		doverlay.fadeOut("fast");
+    		$("#fatscreen").fadeOut("fast");
+    		$("#changcont > div").fadeOut("fast");
+    		$("#easteregg").fadeIn();
+    		setInterval(function(){
+    			$("#easteregg").append("<img src = 'img/twerk.gif'>");
+    		}, 1000)
 		
   
-  }
+  	}
 
-});
+	});
 
 
 });

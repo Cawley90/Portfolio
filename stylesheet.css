@@ -347,3 +347,14 @@ iframe {
 	height: 90%;
 	width: 100%;
 }
+
+#fsprompt {
+	font-family: 'Raleway';
+	text-align: center;
+	color: white;
+}
+
+#subzero {
+	position: relative;
+	margin-left: 5%;
+}
