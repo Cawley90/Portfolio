@@ -33,13 +33,14 @@ $(document).ready(function(){
 
 
 		p.click(function() {
+				// Image on pictures that tell users to click for preview.  If the user is on a page where it's needed, it will appear.
 				if ($('#chelp').css("display") == "none") {
 					$("#chelp").fadeIn("fast");
 				}
 
-				//$("#proclick").empty();
+				
 
-				console.log(p.contents);
+
 				pTitle.text(t);
 				pDetails.text(v);
 				pic.css("background-image", i);
@@ -108,9 +109,9 @@ $(document).ready(function(){
 
 
 
-
+	// main page music pause.
 	$('#pause').click(function() {
-		//mksong.pause();
+
 
 		if (mksong.paused == false) {
 			mksong.pause();
@@ -122,7 +123,7 @@ $(document).ready(function(){
 		}
 	})
 
-
+	// Detects what content is currently on the page.  If the content doesn't match what the user clicks, it clears it out.
 	function pageClear(currentpg) {
 		this.currentpg = currentpg;
 
@@ -133,7 +134,7 @@ $(document).ready(function(){
 		}
 	}
 
-
+	// From here down, it's just what happens when you click on a tab in the nav bar.  Nothing special.
 
 	$("#folio").click(function(){
 		pageClear($("#cselect, #pdetails"))
@@ -164,6 +165,9 @@ $(document).ready(function(){
 		pageClear($("#regview"));
 	})
 
+	// end navbar
+
+	//start easter egg when user clicks on Corgi pendant.  This is just the popup window.
 	$("#cpendant").click(function(){
 		mksong.pause();
 		$("#fatality")[0].volume = 0.3;
@@ -173,6 +177,7 @@ $(document).ready(function(){
 			$("#fatality")[0].play();
 		}, 600)
 	})
+
 
 
 	//starting the easter egg button combo functions
