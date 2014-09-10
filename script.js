@@ -204,7 +204,7 @@ $(document).ready(function(){
 
     	$(document).unbind('keydown',arguments.callee);
         
-    		$("#avast")[0].volume = 0.5;
+    		$("#avast")[0].volume = 0.3;
     		setTimeout(function(){
     			$("#avast")[0].play();
     		}, 500);
